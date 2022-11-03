@@ -1,10 +1,10 @@
-FROM ubuntu  20.04
+FROM ubuntu
 
 # Install Nginx
 RUN apt-get -y update && apt-get -y install nginx
 
 # Copy the Nginx index
-COPY inxdex.html /var/www/html/index.html
+COPY . /var/www/html/
 
 # Expose the port for access
 EXPOSE 80/tcp
